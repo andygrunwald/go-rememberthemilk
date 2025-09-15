@@ -63,6 +63,7 @@ type Client struct {
 	Contacts       *ContactsService
 	Timelines      *TimelineService
 	Tasks          *TaskService
+	Test           *TestService
 }
 
 type service struct {
@@ -156,6 +157,7 @@ func (c *Client) initialize() {
 	c.Contacts = (*ContactsService)(&c.common)
 	c.Timelines = (*TimelineService)(&c.common)
 	c.Tasks = (*TaskService)(&c.common)
+	c.Test = (*TestService)(&c.common)
 }
 
 // SetAuthenticationToken sets the authentication token to be used in API requests.
